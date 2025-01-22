@@ -168,16 +168,164 @@
             </div>
         </section>
 
-        <section class="profile-card" style="animation-delay: 0.4s;">
-            <h2>Publications</h2>
-            <div class="publication-card">
-                <a href="#">
-                    <h3>Stability of Hypersurfaces...</h3>
-                    <p>Mathematische Nachrichten (2022)</p>
-                </a>
-            </div>
-            <!-- 其他论文 -->
-        </section>
+        <!-- 论文成果 -->
+<section class="section">
+    <h2><i class="fas fa-file-alt"></i> 发表论文</h2>
+    
+    <!-- 论文条目 1 -->
+    <div class="publication-card">
+        <div class="pub-header">
+            <span class="pub-status published">已发表</span>
+            <span class="pub-year">2022</span>
+        </div>
+        <a href="https://doi.org/10.1002/mana.202000363" target="_blank" class="pub-title">
+            The stability of hypersurfaces with constant shifted kāth mean curvature
+        </a>
+        <div class="pub-authors">Chen, Y., Li, H.</div>
+        <div class="pub-journal">
+            <i class="fas fa-book-open"></i> 
+            Mathematische Nachrichten, 295(1), 58-70
+        </div>
+    </div>
+
+    <!-- 论文条目 2 -->
+    <div class="publication-card">
+        <div class="pub-header">
+            <span class="pub-status preprint">预印本</span>
+            <span class="pub-year">2022</span>
+        </div>
+        <a href="https://arxiv.org/abs/2206.09062" target="_blank" class="pub-title">
+            Some rigidity results on compact hypersurfaces with capillary boundary in the hyperbolic space
+        </a>
+        <div class="pub-authors">Chen, Y., Pyo, J.</div>
+        <div class="pub-journal">
+            <i class="fas fa-archive"></i> 
+            arXiv preprint arXiv:2206.09062
+        </div>
+    </div>
+
+    <!-- 论文条目 3 -->
+    <div class="publication-card">
+        <div class="pub-header">
+            <span class="pub-status published">已发表</span>
+            <span class="pub-year">2024</span>
+        </div>
+        <a href="#" class="pub-title">
+            Geometric inequalities for free boundary hypersurfaces in a ball
+        </a>
+        <div class="pub-authors">Chen, Y., Hu, Y., Li, H.</div>
+        <div class="pub-journal">
+            <i class="fas fa-book-open"></i> 
+            Annals of Global Analysis and Geometry, 1-13
+        </div>
+    </div>
+
+    <!-- 论文条目 4 -->
+    <div class="publication-card">
+        <div class="pub-header">
+            <span class="pub-status preprint">预印本</span>
+            <span class="pub-year">2024</span>
+        </div>
+        <a href="https://arxiv.org/abs/2405.06934" target="_blank" class="pub-title">
+            A Constrained Mean Curvature Flow On Capillary Hypersurface Supported On Totally Geodesic Plane
+        </a>
+        <div class="pub-authors">Chai, X., Chen, Y.</div>
+        <div class="pub-journal">
+            <i class="fas fa-archive"></i> 
+            arXiv preprint arXiv:2405.06934
+        </div>
+    </div>
+
+    <!-- 论文条目 5 -->
+    <div class="publication-card">
+        <div class="pub-header">
+            <span class="pub-status submitted">审稿中</span>
+            <span class="pub-year">2024</span>
+        </div>
+        <div class="pub-title">
+            Area Estimates Related to Eigenvalues and Yamabe constants for capillary hypersurfaces
+        </div>
+        <div class="pub-authors">Chen, Y., Lee, S.</div>
+        <div class="pub-journal">
+            <i class="fas fa-paper-plane"></i> 
+            已提交
+        </div>
+    </div>
+</section>
+
+<style>
+/* 出版物卡片样式 */
+.publication-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #917FB3;
+}
+
+.publication-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pub-status {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.published { background: #2ecc71; color: white; }
+.preprint { background: #f1c40f; color: black; }
+.submitted { background: #3498db; color: white; }
+
+.pub-year {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2A2F4F;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.pub-title:hover {
+    color: #917FB3;
+    text-decoration: underline;
+}
+
+.pub-authors {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.pub-journal {
+    color: #2A2F4F;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pub-journal i {
+    color: #917FB3;
+    font-size: 0.9rem;
+}
+</style>
 
         <a href="CV.pdf" class="floating-button">
             <i class="fas fa-download"></i> Download CV
