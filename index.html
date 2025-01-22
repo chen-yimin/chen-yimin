@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yimin Chen | Mathematical Sciences</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2A2F4F;
+            --secondary: #917FB3;
+            --accent: #FDE2F3;
+            --text: #2A2F4F;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #FDE2F320 0%, #E5BEEC20 100%);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 0;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-left: 1rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--secondary);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .timeline-item.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .publication-card {
+            background: white;
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .publication-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(146, 127, 179, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">Yimin Chen</h1>
+            <div class="profile-card">
+                <div class="contact-bar">
+                    <!-- 联系方式内容 -->
+                </div>
+            </div>
+        </header>
+
+        <section class="profile-card" style="animation-delay: 0.2s;">
+            <h2>Academic Career</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Postdoctoral Researcher</h3>
+                    <p>Pusan National University | 2024-Present</p>
+                </div>
+                <!-- 其他经历 -->
+            </div>
+        </section>
+
+        <section class="profile-card" style="animation-delay: 0.4s;">
+            <h2>Publications</h2>
+            <div class="publication-card">
+                <a href="#">
+                    <h3>Stability of Hypersurfaces...</h3>
+                    <p>Mathematische Nachrichten (2022)</p>
+                </a>
+            </div>
+            <!-- 其他论文 -->
+        </section>
+
+        <a href="CV.pdf" class="floating-button">
+            <i class="fas fa-download"></i> Download CV
+        </a>
+    </div>
+
+    <script>
+        // 滚动动画触发
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.timeline-item').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
